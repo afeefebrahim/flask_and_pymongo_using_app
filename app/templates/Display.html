@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Mapping Phase</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <style>
+      .container {
+        max-width: 1000px;
+      }
+	
+form { 
+    display: block;
+    margin-top: 05em;
+    margin-left: 10em;
+}
+
+    </style>
+  </head>
+  <form class="form-horizontal" method="post" action="{{ url_for('index11') }}">
+	<fieldset>
+	<legend>Map The Keys to the Values</legend>
+	<div class="form-group">   {% for heads in head %}
+	<input type="text" name="output_head" value="{{ heads }}" readonly>
+		
+		{% block content %}	
+		<table class="table">     
+				    <select name="Item_1" >
+					{% for y in obj %}
+					<option value="{{ y }}">{{ y }}</option>
+					{% endfor %}
+				    </select>   
+			    
+			</div></table>		
+
+		{% endblock %}</td></tr>
+                
+          			{% endfor %}</td></input>
+          
+	</table>
+	 
+	<input  type="submit" name="submit" value="Submit your Requirement">
+	</div>
+	</fieldset>  
+</form>
+</html>
+
+
